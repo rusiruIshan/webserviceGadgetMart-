@@ -1,0 +1,16 @@
+spring:
+  security:
+    enabled: false
+  profiles:
+    active: dev
+
+
+
+server:
+  port: 8338
+  context-path: /mediator
+
+
+
+
+
