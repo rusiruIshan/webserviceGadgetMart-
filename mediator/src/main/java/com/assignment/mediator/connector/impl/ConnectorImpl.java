@@ -29,6 +29,10 @@ public class ConnectorImpl implements Connector {
     
     private RestTemplate restTemplate;
     
+    public ConnectorImpl() {
+        this.restTemplate = new RestTemplate();
+    }
+    
     @Value("${application.api.getAbanceAllProductUrl}")
     private String getAbanceAllProductUrl;
     @Value("${application.api.getSoftLogicAllProductUrl}")

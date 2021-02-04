@@ -24,11 +24,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> getProductList() {
-        List<Product> products = new ArrayList<>();
-        products.addAll(connector.getAbanceAllProduct());
-        products.addAll(connector.getSingerAllProduct());
-        products.addAll(connector.getSoftLogicAllProduct());
-        return products;
+        return connector.getAllProduct();
     }
 
     @Override

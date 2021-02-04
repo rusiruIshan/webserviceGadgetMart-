@@ -22,6 +22,4 @@ server:
 
 application:
   api:
-    getAbanceAllProductUrl: sadsadas
-    getSoftLogicAllProductUrl: sadsadas
-    getSingerAllProductUrl: sadsadas
+    getAllProductUrl: http://localhost:8042/product/product-list

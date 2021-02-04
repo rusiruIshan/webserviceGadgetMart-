@@ -1,6 +1,6 @@
 application:
   api:
-    getAbanceAllProductUrl: sdasd
-    getSoftLogicAllProductUrl: jhggkh
-    getSingerAllProductUrl: hgkjhgj
+    getAbanceAllProductUrl: http://localhost:8339/abance/product/product-list
+    getSoftLogicAllProductUrl: http://localhost:8340/singer/product/product-list
+    getSingerAllProductUrl: http://localhost:8341/softlogic/product/product-list
 

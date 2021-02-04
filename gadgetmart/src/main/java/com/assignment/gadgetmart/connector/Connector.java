@@ -9,8 +9,6 @@ import java.util.List;
  */
 public interface Connector {
     
-    List<Product> getAbanceAllProduct();
-    List<Product> getSoftLogicAllProduct();
-    List<Product> getSingerAllProduct();
+    List<Product> getAllProduct();
     
 }

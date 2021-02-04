@@ -17,7 +17,7 @@ import java.util.List;
  */
 @RestController
 @CrossOrigin
-@RequestMapping("/product")
+@RequestMapping("/softlogic/product")
 public class ProductController {
     
     
