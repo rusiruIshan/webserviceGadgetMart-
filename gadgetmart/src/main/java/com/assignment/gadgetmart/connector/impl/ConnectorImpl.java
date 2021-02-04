@@ -1,10 +1,7 @@
 package com.assignment.gadgetmart.connector.impl;
 
 import com.assignment.gadgetmart.connector.Connector;
-import com.assignment.gadgetmart.domain.dto.AbanceProduct;
 import com.assignment.gadgetmart.domain.dto.Product;
-import com.assignment.gadgetmart.domain.dto.SingerProduct;
-import com.assignment.gadgetmart.domain.dto.SoftlogicProduct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -17,7 +14,7 @@ import java.net.URI;
 import java.util.List;
 
 /**
- * @author Rusiru on 2/2/2021 8:51 PM
+ * @author Rusiru
  */
 @Component
 public class ConnectorImpl implements Connector {

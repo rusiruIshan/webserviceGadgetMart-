@@ -5,7 +5,7 @@ import com.assignment.gadgetmart.domain.dto.Product;
 import java.util.List;
 
 /**
- * @author Rusiru on 7/4/2020 10:55 PM
+ * @author Rusiru
  */
 public interface ProductService {
     

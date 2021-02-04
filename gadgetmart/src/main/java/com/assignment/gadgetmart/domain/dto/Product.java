@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @author Rusiru on 7/4/2020 9:46 PM
+ * @author Rusiru
  */
 @Data
 public class Product {

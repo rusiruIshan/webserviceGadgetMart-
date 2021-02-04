@@ -20,3 +20,8 @@ server:
   port: 8338
   context-path: /gadgetmat
 
+application:
+  api:
+    getAbanceAllProductUrl: sadsadas
+    getSoftLogicAllProductUrl: sadsadas
+    getSingerAllProductUrl: sadsadas

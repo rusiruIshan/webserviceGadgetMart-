@@ -3,7 +3,7 @@ package com.assignment.gadgetmart.domain.dto;
 import lombok.Data;
 
 /**
- * @author Rusiru on 7/4/2020 8:59 PM
+ * @author Rusiru
  */
 @Data
 public class ProductCategory {
