@@ -7,7 +7,7 @@ import lombok.Data;
  */
 @Data
 public class ProductCategory {
-    private long id;
+    private String id;
     private String name;
     private String createUser;
     private String status;

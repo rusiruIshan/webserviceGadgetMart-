@@ -1,6 +1,7 @@
 package com.assignment.gadgetmart.service.impl;
 
 import com.assignment.gadgetmart.domain.dto.Customer;
+import com.assignment.gadgetmart.domain.dto.User;
 import com.assignment.gadgetmart.repository.CustomerRepository;
 import com.assignment.gadgetmart.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,10 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Customer getCustomer(String email) {
         return customerRepository.getCustomer(email);
+    }
+
+    @Override
+    public User loginUser(User data) {
+        return customerRepository.loginUser(data);
     }
 }

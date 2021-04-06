@@ -1,6 +1,7 @@
 package com.assignment.gadgetmart.repository.impl;
 
 import com.assignment.gadgetmart.domain.dto.Customer;
+import com.assignment.gadgetmart.domain.dto.User;
 import com.assignment.gadgetmart.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -28,7 +30,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
             param.put("address", customer.getAddress());
             param.put("email", customer.getEmail());
         
-            String sql = "INSERT INTO `supervis_shopping_cart`.`customer_cart` (`product_id`, `customer_id`, `qty`, `status_id`) VALUES (:product_id, :customer_id, :qty, 1)";
+            String sql = "INSERT INTO `web-service-assignment-db`.`customer_cart` (`product_id`, `customer_id`, `qty`, `status_id`) VALUES (:product_id, :customer_id, :qty, 1)";
             return namedParameterJdbcTemplate.update(sql, param);
     }
     
@@ -40,7 +42,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         param.put("address", customer.getAddress());
         param.put("email", customer.getEmail());
     
-        String sql = "INSERT INTO `supervis_shopping_cart`.`customer_cart` (`product_id`, `customer_id`, `qty`, `status_id`) VALUES (:product_id, :customer_id, :qty, 1)";
+        String sql = "INSERT INTO `web-service-assignment-db`.`customer_cart` (`product_id`, `customer_id`, `qty`, `status_id`) VALUES (:product_id, :customer_id, :qty, 1)";
         return namedParameterJdbcTemplate.update(sql, param);
     }
     
@@ -56,4 +58,28 @@ public class CustomerRepositoryImpl implements CustomerRepository {
             return customer;
         }).get(0);
     }
+
+    @Override
+    public User loginUser(User user) {
+        String sql = "SELECT * FROM `web-service-assignment-db`.customer where email = :email and password=:password";
+
+        Map<String, String> map = new HashMap<>();
+        map.put("email", user.getEmail());
+        map.put("password", user.getPassword());
+
+        List<User> query = namedParameterJdbcTemplate.query(sql, map, (rs, index) -> {
+            User userResponse = new User();
+            userResponse.setUserId(rs.getInt("customerId"));
+            userResponse.setUsername(rs.getString("name"));
+            userResponse.setEmail(rs.getString("email"));
+            return userResponse;
+        });
+        if (query.size() > 0){
+            return query.get(0);
+        }else{
+            return new User();
+        }
+    }
+
+
 }

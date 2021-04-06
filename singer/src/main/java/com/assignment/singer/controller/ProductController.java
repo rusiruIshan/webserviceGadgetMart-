@@ -29,12 +29,12 @@ public class ProductController {
         for (int i = 0; i < 3; i++) {
             SingerProduct abanceProduct = new SingerProduct();
             abanceProduct.setDescription("test");
-            abanceProduct.setId(1234);
-            abanceProduct.setName("test123");
-            abanceProduct.setProduct_category(new ProductCategory(123, "test", null, "ok", "test"));
+            abanceProduct.setId("si"+ i);
+            abanceProduct.setName("Singer Item 0"+ (i+1));
+            abanceProduct.setProduct_category(new ProductCategory("123", "test", null, "ok", "test"));
             abanceProduct.setProductImageList(new ArrayList<>());
             abanceProduct.setQtyOnHand(10);
-            abanceProduct.setUnitPrice(25.00);
+            abanceProduct.setUnitPrice(125.00 * (i+1));
             abanceProducts.add(abanceProduct);
         }
         return abanceProducts;

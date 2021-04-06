@@ -10,9 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Rusiru on 7/4/2020 10:55 PM
- */
+
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -36,7 +34,7 @@ public class ProductServiceImpl implements ProductService {
         List<Product> productListByCategory = getProductList();
         
         for (Product product: productList) {
-            if(product.getProduct_category().getId() == Long.parseLong(categoryId)){
+            if(product.getProduct_category().getId() == categoryId){
                 productListByCategory.add(product);
             }
         }

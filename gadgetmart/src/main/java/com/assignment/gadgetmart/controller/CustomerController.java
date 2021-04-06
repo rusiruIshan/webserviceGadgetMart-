@@ -1,6 +1,7 @@
 package com.assignment.gadgetmart.controller;
 
 import com.assignment.gadgetmart.domain.dto.Customer;
+import com.assignment.gadgetmart.domain.dto.User;
 import com.assignment.gadgetmart.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,4 +31,7 @@ public class CustomerController {
     public Customer getCustomer(@PathVariable String email){
         return customerService.getCustomer(email);
     }
+
+    @PostMapping(path = "/login")
+    public User loginUser(@RequestBody User data) {return customerService.loginUser(data);}
 }

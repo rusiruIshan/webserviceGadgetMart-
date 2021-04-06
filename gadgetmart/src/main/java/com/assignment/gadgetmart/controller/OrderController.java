@@ -27,4 +27,9 @@ public class OrderController {
     public List<Order> getAllOrders(String email){
         return orderServer.getAllOrders(email);
     }
+
+    @GetMapping("/get-all-orders-by-email/email")
+    public List<Order> getAllOrdersByEmail(@PathVariable String email){
+        return orderServer.getAllOrders(email);
+    }
 }

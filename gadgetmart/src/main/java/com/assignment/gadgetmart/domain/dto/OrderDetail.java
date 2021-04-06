@@ -11,4 +11,5 @@ public class OrderDetail {
     private Product product;
     private String qty;
     private double amount;
+    private String itemId;
 }

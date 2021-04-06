@@ -9,7 +9,7 @@ import java.util.List;
  */
 @Data
 public class SoftlogicProduct {
-    private long id;
+    private String id;
     private String name;
     private String description;
     private long qtyOnHand;

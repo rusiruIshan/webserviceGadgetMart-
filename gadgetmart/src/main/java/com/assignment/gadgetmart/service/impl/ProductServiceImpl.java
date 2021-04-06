@@ -33,7 +33,7 @@ public class ProductServiceImpl implements ProductService {
         List<Product> productListByCategory = getProductList();
         
         for (Product product: productList) {
-            if(product.getProduct_category().getId() == Long.parseLong(categoryId)){
+            if(product.getProduct_category().getId() == categoryId){
                 productListByCategory.add(product);
             }
         }

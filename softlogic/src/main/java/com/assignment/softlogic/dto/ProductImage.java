@@ -7,7 +7,7 @@ import lombok.Data;
  */
 @Data
 public class ProductImage {
-    private long id;
+    private String id;
     private String name;
     private String path;
     private String statusId;
